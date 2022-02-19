@@ -13,7 +13,11 @@ public class ContaCorrente extends Conta  {
 		this.saldo = 0;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Conta Corrente: " + super.toString() ;
+	}
+
 		
 	}
 

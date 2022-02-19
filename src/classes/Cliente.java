@@ -53,7 +53,7 @@ public abstract class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [nome=" + nome + ", endereco=" + endereco + ", telefone=" + telefone + "]";
+		return "" + nome + ", Endereco: " + endereco + ", Telefone: " + telefone + " ";
 	}
 
 }
