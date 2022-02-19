@@ -14,12 +14,6 @@ public class PessoaJuridica extends Cliente{
 	public String toString() {
 		return super.toString() + " PessoaJuridica - CNPJ: " + cnpj  ;
 	}
-//	@Override
-//	public double getTaxadeSaque() {
-	//	return taxaSaque;
-	//}
-	
-	
-	
 
+	
 }

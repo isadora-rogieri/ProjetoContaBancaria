@@ -13,7 +13,7 @@ public abstract class Cliente {
 		this.endereco = endereco;
 		this.telefone = telefone;
 	}
-	
+	//Gettes e Setters
 	public String getNome() {
 		return nome;
 	}
@@ -50,7 +50,7 @@ public abstract class Cliente {
 	public void setRendimento(double rendimento) {
 		this.rendimento = rendimento;
 	}
-
+	//To String
 	@Override
 	public String toString() {
 		return "" + nome + ", Endereco: " + endereco + ", Telefone: " + telefone + " ";

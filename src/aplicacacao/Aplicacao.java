@@ -17,7 +17,7 @@ public class Aplicacao {
 
 	public static void main(String[] args) {
 
-			Cliente[] clientes = {
+		Cliente[] clientes = {
 				new PessoaFisica("Joao", "Rua dois", "32324545", "456.985.741-62"),
 				new PessoaFisica("Maria", "Rua jose de souza", "35624855", "126.978.051-66"),
 				new PessoaJuridica("Vani", "Rua cinco", "45224545", "478.935.421-22"),
@@ -26,10 +26,12 @@ public class Aplicacao {
 				new PessoaJuridica("Pietro", "Rua dos doguinhos", "996332415", "118.665.121-92") //6
 		};
 
+		//abrindo conta corrente e depositando
 
 		Conta conta = new ContaCorrente();
 		conta.setCliente(clientes[0]);
 		conta.depositar(100);
+		//saque acima do saldo
 		System.out.println("Saldo " + conta.getSaldo()  + conta.getCliente());
 		try {
 			conta.sacar(150);
@@ -37,7 +39,7 @@ public class Aplicacao {
 		}catch(ExcedeuLimitedeSaldoException e) {
 			System.err.println(e.getMessage());
 		}
-
+		//saque abaixo do saldo
 		Conta conta2 = new ContaCorrente();
 		conta2.setCliente(clientes[2]);
 		conta2.depositar(100);
@@ -48,7 +50,7 @@ public class Aplicacao {
 		}catch(ExcedeuLimitedeSaldoException e) {
 			System.err.println(e.getMessage());
 		}
-
+		//Conta poupança de cliente Juridico
 		Conta contaPoup = new ContaPoupanca();
 		try {
 			contaPoup.setCliente(clientes[2]);
@@ -58,28 +60,30 @@ public class Aplicacao {
 		} catch (PessoaJuridicaNaoAbrePoupancaException e){
 			System.err.println(e.getMessage());
 		}
+
+		//Invetindo PJ
 		ContaInvestimento contInvest = new ContaInvestimento();
 		contInvest.setCliente(clientes[2]);
 		contInvest.investir(100);		
 		System.out.println(contInvest);
 		contInvest.investir(50);	
 		System.out.println(contInvest);
-
+		//Investindo PF
 		ContaInvestimento contInvest2 = new ContaInvestimento();
 		contInvest2.setCliente(clientes[0]);
 		contInvest2.investir(100);		
 		System.out.println(contInvest2);
-
+		//Transferindo
 		ContaCorrente contCorrente = new ContaCorrente();
 		contCorrente.setCliente(clientes[3]);
 		contCorrente.depositar(150);
 		contCorrente.transferir(conta2, 50);
 		System.out.println(contCorrente);
 		System.out.println(conta2);
-		
-		
-		
+
+
+
 	}
-	
+
 
 }

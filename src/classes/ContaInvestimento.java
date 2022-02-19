@@ -12,6 +12,7 @@ public class ContaInvestimento extends Conta {
 	public ContaInvestimento() {
 		this.saldo = 0;
 	}
+	//Investir
 	public void investir(double valorInvest) {
 		if (valorInvest > 0) {
 			saldo +=  (valorInvest*(cliente.getRendimento())+ valorInvest);

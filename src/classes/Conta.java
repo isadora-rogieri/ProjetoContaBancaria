@@ -3,7 +3,7 @@ package classes;
 
 
 import excecoes.ExcedeuLimitedeSaldoException;
-import excecoes.PessoaJuridicaNaoAbrePoupancaException;
+
 
 
 public class Conta {
@@ -17,7 +17,7 @@ public class Conta {
 		this.saldo = 0;
 	}
 
-
+	//Gettes e Setters
 	public Cliente getCliente() {
 		return this.cliente;
 	}
@@ -31,17 +31,14 @@ public class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
-	
-	
-
-
+	//Depositar
 	public void depositar(double valorDeposito) {
 		if (valorDeposito > 0) {
 			saldo += valorDeposito;
 
 		} 
 	}
-
+	//Sacar
 	public void sacar(double valorSaque)
 			throws ExcedeuLimitedeSaldoException{
 		if (this.saldo < valorSaque) 
@@ -58,7 +55,7 @@ public class Conta {
 		return " Saldo: " + saldo +" Cliente: " + cliente ;
 	}
 
-
+	//Transferir
 	public void transferir(Conta contaFavorecido, double valor) {
 		this.sacar(valor);
 		contaFavorecido.depositar(valor);
