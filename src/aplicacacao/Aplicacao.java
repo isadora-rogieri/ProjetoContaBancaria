@@ -32,10 +32,10 @@ public class Aplicacao {
 		conta.setCliente(clientes[0]);
 		conta.depositar(100);
 		//saque acima do saldo
-		System.out.println("Saldo " + conta.getSaldo()  + conta.getCliente());
+		System.out.println(conta);
 		try {
 			conta.sacar(150);
-			System.out.println("Saldo " + conta.getSaldo() + "Cliente: " + conta.getCliente());
+			System.out.println(conta);
 		}catch(ExcedeuLimitedeSaldoException e) {
 			System.err.println(e.getMessage());
 		}
