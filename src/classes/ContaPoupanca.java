@@ -1,6 +1,6 @@
 package classes;
 
-import java.util.ArrayList;
+
 
 import excecoes.PessoaJuridicaNaoAbrePoupancaException;
 

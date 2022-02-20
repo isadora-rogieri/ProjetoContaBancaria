@@ -1,7 +1,6 @@
 package aplicacacao;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import classes.Cliente;
 import classes.Conta;
